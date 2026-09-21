@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import TrakteerWidget from "@/components/TrakteerWidget";
 import { getCurrentUser } from "@/lib/auth";
 
 export const metadata: Metadata = {
@@ -31,6 +32,17 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
                 <li><a href="/marketplace" className="hover:text-[#2f8f2f]">Marketplace</a></li>
                 <li><a href="/peta" className="hover:text-[#2f8f2f]">Peta Limbah</a></li>
                 <li><a href="/daftar" className="hover:text-[#2f8f2f]">Daftar Akun</a></li>
+                <li><a href="/api/source" download className="hover:text-[#2f8f2f]">⬇ Download Source Code</a></li>
+                <li>
+                  <a
+                    href="https://github.com/guediperpustakaan-cpu/sisakita-agricultural-waste-marketplace-2-gdp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#2f8f2f]"
+                  >
+                    Kode sumber (GitHub)
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
@@ -39,7 +51,25 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
               <p className="mt-2 text-slate-500">© {new Date().getFullYear()} SisaKita</p>
             </div>
           </div>
+          <div className="border-t border-slate-100">
+            <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-slate-500 sm:flex-row">
+              <p>Open Source oleh MZF - 2026</p>
+              <p>
+                Gratis &amp; bebas iklan. Dukung via{" "}
+                <a
+                  href="https://trakteer.id/perpus_opera/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#F45B27] hover:underline"
+                >
+                  Trakteer
+                </a>{" "}
+                ☕
+              </p>
+            </div>
+          </div>
         </footer>
+        <TrakteerWidget />
       </body>
     </html>
   );
