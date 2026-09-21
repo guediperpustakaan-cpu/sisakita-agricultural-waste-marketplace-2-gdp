@@ -1,0 +1,28 @@
+# dependencies
+node_modules
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# next.js
+.next/
+out/
+build/
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# env files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# misc
+*.log
+.DS_Store
+*.pem
+.idea
+.vscode

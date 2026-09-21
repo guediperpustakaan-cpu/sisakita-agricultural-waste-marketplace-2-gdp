@@ -41,11 +41,11 @@ export async function ensureSeed() {
   const ls = await db
     .insert(listings)
     .values([
-      { providerId: provider1, categoryId: cats[0].id, title: "Sekam Padi Kering 10 Ton", description: "Sekam padi hasil penggilingan, kadar air rendah, siap angkut.", quantity: "10", unit: "TON", pricePerUnit: "450000", condition: "DRY", latitude: -6.3227, longitude: 107.3376, imageUrl: "/img/sekam-padi.jpg" },
+      { providerId: provider1, categoryId: cats[0].id, title: "Sekam Padi Kering 10 Ton", description: "Sekam padi hasil penggilingan, kadar air rendah, siap angkut.", quantity: "10", unit: "TON", pricePerUnit: "450000", condition: "DRY", latitude: -6.3227, longitude: 107.3376, imageUrl: "/img/sekam-padi.svg" },
       { providerId: provider1, categoryId: cats[4].id, title: "Jerami Padi Bal 5 Ton", description: "Jerami padi dipres bal, cocok untuk pakan ternak.", quantity: "5", unit: "TON", pricePerUnit: "380000", condition: "SEMI_DRY", latitude: -6.2907, longitude: 107.2951, imageUrl: null },
-      { providerId: provider2, categoryId: cats[1].id, title: "Tongkol Jagung 3.000 Kg", description: "Janggel jagung kering, bersih dari kotoran.", quantity: "3000", unit: "KG", pricePerUnit: "900", condition: "DRY", latitude: -7.9666, longitude: 112.6326, imageUrl: "/img/tongkol-jagung.jpg" },
-      { providerId: provider2, categoryId: cats[3].id, title: "Ampas Tebu Segar 20 Ton", description: "Bagasse langsung dari pabrik gula, kadar air tinggi.", quantity: "20", unit: "TON", pricePerUnit: "300000", condition: "WET", latitude: -7.9312, longitude: 112.7521, imageUrl: "/img/ampas-tebu.jpg" },
-      { providerId: provider2, categoryId: cats[2].id, title: "Tandan Kosong Sawit 50 Ton", description: "Tankos untuk kompos dan pelet energi, kontrak bulanan.", quantity: "50", unit: "TON", pricePerUnit: "250000", condition: "WET", latitude: -0.5071, longitude: 101.4478, imageUrl: "/img/tandan-sawit.jpg" },
+      { providerId: provider2, categoryId: cats[1].id, title: "Tongkol Jagung 3.000 Kg", description: "Janggel jagung kering, bersih dari kotoran.", quantity: "3000", unit: "KG", pricePerUnit: "900", condition: "DRY", latitude: -7.9666, longitude: 112.6326, imageUrl: "/img/tongkol-jagung.svg" },
+      { providerId: provider2, categoryId: cats[3].id, title: "Ampas Tebu Segar 20 Ton", description: "Bagasse langsung dari pabrik gula, kadar air tinggi.", quantity: "20", unit: "TON", pricePerUnit: "300000", condition: "WET", latitude: -7.9312, longitude: 112.7521, imageUrl: "/img/ampas-tebu.svg" },
+      { providerId: provider2, categoryId: cats[2].id, title: "Tandan Kosong Sawit 50 Ton", description: "Tankos untuk kompos dan pelet energi, kontrak bulanan.", quantity: "50", unit: "TON", pricePerUnit: "250000", condition: "WET", latitude: -0.5071, longitude: 101.4478, imageUrl: "/img/tandan-sawit.svg" },
       { providerId: provider1, categoryId: cats[5].id, title: "Tempurung Kelapa 8 Ton", description: "Bahan baku arang aktif, kadar air < 12%.", quantity: "8", unit: "TON", pricePerUnit: "1650000", condition: "DRY", latitude: -6.9175, longitude: 107.6191, imageUrl: null },
     ])
     .returning();

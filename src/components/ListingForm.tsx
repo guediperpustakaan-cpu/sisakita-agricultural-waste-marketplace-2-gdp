@@ -6,10 +6,10 @@ import { useState } from "react";
 type Kategori = { id: number; categoryName: string };
 
 const CONTOH_FOTO = [
-  { url: "/img/sekam-padi.jpg", label: "Sekam padi" },
-  { url: "/img/tongkol-jagung.jpg", label: "Tongkol jagung" },
-  { url: "/img/tandan-sawit.jpg", label: "Tandan sawit" },
-  { url: "/img/ampas-tebu.jpg", label: "Ampas tebu" },
+  { url: "/img/sekam-padi.svg", label: "Sekam padi" },
+  { url: "/img/tongkol-jagung.svg", label: "Tongkol jagung" },
+  { url: "/img/tandan-sawit.svg", label: "Tandan sawit" },
+  { url: "/img/ampas-tebu.svg", label: "Ampas tebu" },
 ];
 
 export default function ListingForm({ categories }: { categories: Kategori[] }) {
